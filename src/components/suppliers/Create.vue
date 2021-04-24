@@ -30,13 +30,13 @@ export default {
 }
 </script>
 <template>
-  <div class="col-12 d-flex justify-content-between mt-2">
+  <div class="col-12 d-flex justify-content-between mt-2 container">
       <label class="h2">New Supplier</label>
       <div class="btn-toolbar">
         <router-link to="/suppliers" class="btn btn-sm btn-outline-secondary">Supplier List</router-link>
       </div>
   </div>
-  <div class="col-12">
+  <div class="col-12 container">
     <div class="flex flex-row">
       <div class="col-6 offset-2">
         <Form v-slot="{ errors }" @submit="onSubmit">

@@ -35,7 +35,7 @@ export default {
 };
 </script>
 <template>
-  <div class="col-12 d-flex justify-content-between mt-2">
+  <div class="col-12 d-flex justify-content-between mt-2 container">
     <label class="h2">New Product</label>
     <div class="btn-toolbar">
       <router-link to="/products" class="btn btn-sm btn-outline-secondary"
@@ -43,13 +43,13 @@ export default {
       >
     </div>
   </div>
-  <div class="col-12">
+  <div class="col-12 container">
     <div class="flex flex-row">
       <Form v-slot="{ errors }" @submit="onSubmit">
         <div class="col-4"></div>
         <div class="mb-3 row">
+          <div class="col-sm-4">
           <label for="staticEmail" class="col-sm-1 col-form-label">Name</label>
-          <div class="col-sm-5">
             <Field
               type="text"
               class="form-control"
@@ -60,19 +60,31 @@ export default {
             />
             <span>{{ errors.productname }}</span>
           </div>
+          <div class="col-sm-4">
           <label for="inputPassword" class="col-sm-1 col-form-label"
             >Description</label
           >
-          <div class="col-sm-5">
             <Field
               type="text"
               class="form-control"
               v-model="product.description"
               name="productdescription"
-              :rules="isRequired"
               placeholder="Product Description"
             />
             <span>{{ errors.productdescription }}</span>
+          </div>
+          <div class="col-sm-4">
+          <label for="inputPassword" class="col-sm-1 col-form-label"
+            >Quantiy</label
+          >
+            <Field
+              type="number"
+              class="form-control"
+              v-model="product.quantity"
+              name="productquantity"
+              placeholder="Quantity"
+            />
+            <span>{{ errors.productquantity }}</span>
           </div>
         </div>
         <div class="my-2">
