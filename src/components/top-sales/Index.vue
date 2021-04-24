@@ -14,14 +14,17 @@ export default {
   methods: {
     
     fetchTopSales() {
-       axios.get('https://codechallenge.pikdrive.com/api/top-sales').then(({response}) => {
-         this.sales = response.data;
+       axios.get('https://codechallenge.pikdrive.com/api/top-sales').then(({data}) => {
+         this.sales = data.data;
        })
     }
   }
 }
 </script>
 <template>
+  <div class="col-12 d-flex justify-content-between mt-2">
+      <label class="h2">Top 3 Sales</label>
+  </div>
   <div class="col-12">
     <div class="flex flex-row">
       <div class="table-responsive">
