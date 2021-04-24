@@ -13,8 +13,8 @@ export default {
   },
   methods: {
     fetchSuppliers() {
-      axios.get('https://codechallenge.pikdrive.com/api/suppliers').then(({data}) => {
-        this.suppliers = data.data;
+      axios.get('https://codechallenge.pikdrive.com/api/suppliers').then(({response}) => {
+        this.suppliers = response.data;
       })
     }
   }

@@ -20,10 +20,8 @@ export default {
                 <router-link to="/orders" class="nav-link">Orders</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="shopping-cart"></span>
-                Products
-              </a>
+                <span data-feather="file"></span>
+                <router-link to="/products" class="nav-link">Products</router-link>
             </li>
             <li class="nav-item">
               <span data-feather="users"></span>

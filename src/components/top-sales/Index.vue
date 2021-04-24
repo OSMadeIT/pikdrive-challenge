@@ -14,9 +14,8 @@ export default {
   methods: {
     
     fetchTopSales() {
-       axios.get('https://codechallenge.pikdrive.com/api/top-sales').then(({data}) => {
-         this.sales = data.data;
-         console.log(data);
+       axios.get('https://codechallenge.pikdrive.com/api/top-sales').then(({response}) => {
+         this.sales = response.data;
        })
     }
   }

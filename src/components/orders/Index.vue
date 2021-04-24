@@ -30,7 +30,7 @@ export default {
 </script>
 <template>
   <div class="col-12 d-flex justify-content-between mt-2">
-      <label class="h2">Orders List</label>
+      <label class="h2">Orders</label>
       <div class="btn-toolbar mb-2 mb-md-0">
         <router-link to="/orders/create" class="btn btn-sm btn-outline-secondary">Create an Order</router-link>
       </div>
