@@ -10,4 +10,3 @@ git init
 git add -A
 git commit -m 'deploy pikdrive challenge'
 git push -f https://github.com/OSMadeIT/pikdrive-challenge.git master:gh-pages
-cd -
