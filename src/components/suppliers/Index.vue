@@ -1,11 +1,13 @@
 <script>
 import axios from 'axios';
+import moment from 'moment';
 
 export default {
   name: 'SuppliersIndex',
   data() {
     return {
       suppliers: [],
+      moment: moment,
     };
   },
   created() {
@@ -35,7 +37,7 @@ export default {
           <thead>
             <tr>
               <th>#</th>
-              <th>Name</th>
+              <th>Order Number</th>
               <th>Create At</th>
             </tr>
           </thead>
@@ -43,7 +45,7 @@ export default {
             <tr v-for="supplier in suppliers" :key="supplier.id">
               <td>{{ supplier.id }}</td>
               <td>{{ supplier.name }}</td>
-              <td>{{ supplier.created_at}}</td>
+              <td>{{ moment(supplier.created_at).format("DD-MM-YYYY hh:mm:ss") }}</td>
             </tr>
          
           </tbody>

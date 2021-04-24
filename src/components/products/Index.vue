@@ -1,10 +1,13 @@
 <script>
 import axios from 'axios';
+import moment from 'moment';
+
 export default {
   name: 'ProductsIndex',
   data() {
     return {
       products: [],
+      moment: moment,
     };
   },
   created() {
@@ -23,7 +26,10 @@ export default {
 </script>
 <template>
  <div class="col-12 d-flex justify-content-between mt-2">
-      <label class="h2">Products</label>
+      <label class="h2">Products</label>      
+      <div class="btn-toolbar">
+        <router-link to="/products/create" class="btn btn-sm btn-outline-secondary">Add Product</router-link>
+      </div>
   </div>
   <div class="col-12">
     <div class="flex flex-row">
@@ -44,7 +50,7 @@ export default {
               <td>{{ product.name }}</td>
               <td>{{ product.description}}</td>
               <td>{{ product.quantity}}</td>
-              <td>{{ product.created_at}}</td>
+              <td>{{ moment(product.created_at).format("DD-MM-YYYY hh:mm:ss") }}</td>
             </tr>
          
           </tbody>

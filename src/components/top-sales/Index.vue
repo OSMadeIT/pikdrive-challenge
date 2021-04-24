@@ -1,10 +1,13 @@
 <script>
 import axios from 'axios';
+import moment from 'moment';
+
 export default {
   name: 'TopSaleIndex',
   data() {
     return {
       sales: [],
+      moment: moment,
     };
   },
   created() {
@@ -33,7 +36,7 @@ export default {
             <tr>
               <th>#</th>
               <th>Count</th>
-              <th>Name</th>
+              <th>Order Number</th>
               <th>Create At</th>
             </tr>
           </thead>
@@ -42,7 +45,7 @@ export default {
               <td>{{ sale.id }}</td>
               <td>{{ sale.count }}</td>
               <td>{{ sale.orderNumber}}</td>
-              <td>{{ sale.created_at}}</td>
+              <td>{{ moment(sale.created_at).format("DD-MM-YYYY hh:mm:ss") }}</td>
             </tr>
          
           </tbody>
