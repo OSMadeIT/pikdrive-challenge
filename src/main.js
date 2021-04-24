@@ -3,6 +3,7 @@ import App from './App.vue'
 import Vuelidate from 'vuelidate'
 import  { createRouter, createWebHistory } from 'vue-router'
 import 'bootstrap/scss/bootstrap.scss'
+import 'bootstrap/js/dist/modal';
 import routes from './routes';
 
 const router = createRouter({
