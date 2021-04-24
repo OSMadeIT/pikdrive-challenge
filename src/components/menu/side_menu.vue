@@ -17,10 +17,6 @@ export default {
             </li>
             <li class="nav-item">
                 <span data-feather="file"></span>
-                <router-link to="/orders" class="nav-link">Orders</router-link>
-            </li>
-            <li class="nav-item">
-                <span data-feather="file"></span>
                 <router-link to="/products" class="nav-link">Products</router-link>
             </li>
             <li class="nav-item">
@@ -28,16 +24,12 @@ export default {
               <router-link to="/suppliers" class="nav-link">Suppliers</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="bar-chart-2"></span>
-                Reports
-              </a>
+              <span data-feather="users"></span>
+              <router-link to="/product-suppliers" class="nav-link">Product Suppliers</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="layers"></span>
-                Integrations
-              </a>
+                <span data-feather="file"></span>
+                <router-link to="/orders" class="nav-link">Orders</router-link>
             </li>
           </ul>
 
