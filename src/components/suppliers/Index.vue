@@ -13,8 +13,8 @@ export default {
   },
   methods: {
     fetchSuppliers() {
-      axios.get('https://codechallenge.pikdrive.com/api/suppliers').then(({response}) => {
-        this.suppliers = response.data;
+      axios.get('https://codechallenge.pikdrive.com/api/suppliers').then(({data}) => {
+        this.suppliers = data.data;
       })
     }
   }
@@ -23,7 +23,7 @@ export default {
 </script>
 <template>
   <div class="col-12 d-flex justify-content-between mt-2">
-      <label class="h2">Supplier List</label>
+      <label class="h2">Suppliers</label>
       <div class="btn-toolbar">
         <router-link to="/suppliers/create" class="btn btn-sm btn-outline-secondary">Add Supplier</router-link>
       </div>
