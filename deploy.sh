@@ -9,5 +9,5 @@
 git init
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com/OSMadeIT/pikdrive-challenge.git master:gh-pages
+git push -f https://github.com/OSMadeIT/pikdrive-challenge.git master:gh-pages
 cd -
